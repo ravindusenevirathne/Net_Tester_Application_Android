@@ -1,82 +1,51 @@
-📡 Portable Embedded Network Multi Tester
-A compact, low-cost, and multi-functional network diagnostic tool built with ESP32 + W5500 Ethernet module and controlled via a Flutter mobile application.
-Designed to assist network engineers, IT technicians, and students in testing, troubleshooting, and monitoring networks in the field.
+# 📡 Portable Embedded Network Multi Tester
 
-🚀 Features
-🛠️ Hardware Components
-🧠 ESP32 Microcontroller — the main controller with Wi-Fi & Bluetooth capabilities.
+A compact, low-cost, and multi-functional **network diagnostic tool** built using **ESP32 + W5500 Ethernet module**, controlled via a **Flutter mobile app**.
 
-🌐 W5500 Ethernet Module — for stable wired network diagnostics.
+🎯 Ideal for:
+- Network Engineers 🧑‍💻
+- IT Technicians 🧰
+- Networking Students 🎓
 
-🔌 RJ45 Cable Tester — checks for continuity and detects cable faults.
+---
 
-🛰 IP Scanner — discovers active hosts on the LAN.
+## 🚀 Features Overview
 
-🧾 MAC Address Checker — retrieves MAC addresses of router or LAN devices.
+### 🛠️ Hardware (ESP32 + W5500)
+- 🔌 **Wired Ethernet support** (with W5500)
+- 🧪 **RJ45 Cable Test**: Detects continuity & miswiring
+- 🧠 **MAC Address Detection**: For routers & LAN devices
+- 🌐 **IP Scanner**: Scan devices in local subnet
+- 📊 **SNMP Monitoring**: Get router/switch info (CPU, uptime)
+- 📶 **Wi-Fi Scan** (2.4GHz only)
+- 🌍 **Ping Test / DNS Check**: Internet reachability test
+- 🌀 **MAC Spoofing** *(optional)*
 
-📶 Wi-Fi Scanner — scans 2.4GHz wireless networks.
+### 📱 Mobile App (Flutter)
+- 🔵 Connect via **Bluetooth Classic**
+- 🎛️ Select and run tests
+- 📈 View **real-time results**
+- 💾 Save results **locally**
+- 📝 **Export** reports as PDF / Text
+- 🗂️ Access offline results anytime
 
-🧠 SNMP Status Monitoring — queries routers/switches for stats like CPU or uptime.
+---
 
-🌍 Internet Connectivity Test — performs ping and DNS resolution tests.
+## 🧠 ESP32 + W5500 Capabilities
 
-🔧 MAC Address Spoofing (Planned) — for advanced diagnostics.
+- ✅ Supports **DHCP or static IP**
+- 💡 Link/activity LEDs
+- 🔄 Serial-based IP reconfiguration
+- ⚡ LAN-based network scan
+- 🔍 Discover online devices using port 80 scan
 
-📲 Mobile Application (Flutter)
-🎛️ Mode Selector UI — Choose test types like IP scan, cable test, ping, SNMP.
+---
 
-📡 Bluetooth Classic Communication — Control the ESP32 over serial Bluetooth.
+## 📁 Project Structure
 
-🧾 Save Results — Locally store test reports.
-
-🧾 Export to PDF or TXT — For documentation and auditing purposes.
-
-📈 Real-Time Results — See test output as it happens.
-
-📦 ESP32 + W5500 Ethernet Module Based Network Tester
-The core of this project is the Ethernet-enabled ESP32 network tester, which allows robust and rapid diagnostics via LAN.
-
-🔍 Ethernet Capabilities:
-🔧 DHCP and static IP assignment.
-
-🔁 Ping testing to target IPs or internet hosts (e.g., 8.8.8.8).
-
-🖥️ Device discovery on the local subnet.
-
-🚦 LED indicators to confirm link status.
-
-📟 Serial monitor input for real-time configuration (local IP, subnet, gateway).
-
-💡 Ideal for environments where Wi-Fi is unreliable or disabled.
-
-📁 Project Structure
-arduino
-Copy
-/arduino/
-   └── ESP32_W5500_NetworkTester.ino   ← Arduino code for Ethernet module
-/flutter/
-   └── net_tester_app/                 ← Flutter app for controlling and viewing results
-🧰 Setup & Getting Started
-🔌 Wire up ESP32 with W5500 module (CS → GPIO 5 or 15 depending on your board).
-
-⚙️ Upload the Arduino sketch using Arduino IDE.
-
-📲 Install the Flutter app on your Android device.
-
-📡 Connect via Bluetooth and start testing.
-
-🧪 This Project Uses
-Ethernet Library
-
-flutter_bluetooth_serial
-
-ICMP Ping, SNMP Manager (Arduino libraries)
-
-🧰 Serial tools and manual config via Serial Monitor
-
-📎 Additional Resources for Flutter Beginners
-🧪 Lab: Write your first Flutter app
-
-🍳 Cookbook: Useful Flutter samples
-
-📘 Full Flutter Documentation
+```bash
+/net_tester_project/
+├── arduino/
+│   └── ESP32_W5500_NetworkTester.ino     # Main firmware for ESP32
+└── flutter/
+    └── net_tester_app/                   # Flutter mobile app
