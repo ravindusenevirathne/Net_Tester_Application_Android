@@ -1,34 +1,82 @@
-# 📡 Portable Embedded Network Multi Tester
-
-A compact, low-cost, and multi-functional **network diagnostic tool** built with **ESP32 + W5500 Ethernet module** and controlled via a **Flutter mobile application**.  
+📡 Portable Embedded Network Multi Tester
+A compact, low-cost, and multi-functional network diagnostic tool built with ESP32 + W5500 Ethernet module and controlled via a Flutter mobile application.
 Designed to assist network engineers, IT technicians, and students in testing, troubleshooting, and monitoring networks in the field.
 
----
+🚀 Features
+🛠️ Hardware Components
+🧠 ESP32 Microcontroller — the main controller with Wi-Fi & Bluetooth capabilities.
 
-## 🚀 Features
+🌐 W5500 Ethernet Module — for stable wired network diagnostics.
 
-### 🛠 Hardware
-- **ESP32** microcontroller with **W5500 Ethernet** for reliable wired connectivity.
-- **RJ45 cable tester** for continuity and wiring faults.
-- **Network MAC address retrieval** (Router & connected devices).
-- **IP Scanner** for discovering devices in the LAN.
-- **SNMP monitoring** to query network devices for status and metrics.
-- **Internet connectivity test** (ping, DNS lookup).
-- **Wi-Fi scanning** (2.4GHz).
-- **Bluetooth (Classic)** for mobile app connection.
+🔌 RJ45 Cable Tester — checks for continuity and detects cable faults.
 
-### 📱 Mobile Application (Flutter)
-- User-friendly interface for mode selection and test initiation.
-- Real-time results
+🛰 IP Scanner — discovers active hosts on the LAN.
 
+🧾 MAC Address Checker — retrieves MAC addresses of router or LAN devices.
 
-This project is a starting point for a Flutter application.
+📶 Wi-Fi Scanner — scans 2.4GHz wireless networks.
 
-A few resources to get you started if this is your first Flutter project:
+🧠 SNMP Status Monitoring — queries routers/switches for stats like CPU or uptime.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+🌍 Internet Connectivity Test — performs ping and DNS resolution tests.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+🔧 MAC Address Spoofing (Planned) — for advanced diagnostics.
+
+📲 Mobile Application (Flutter)
+🎛️ Mode Selector UI — Choose test types like IP scan, cable test, ping, SNMP.
+
+📡 Bluetooth Classic Communication — Control the ESP32 over serial Bluetooth.
+
+🧾 Save Results — Locally store test reports.
+
+🧾 Export to PDF or TXT — For documentation and auditing purposes.
+
+📈 Real-Time Results — See test output as it happens.
+
+📦 ESP32 + W5500 Ethernet Module Based Network Tester
+The core of this project is the Ethernet-enabled ESP32 network tester, which allows robust and rapid diagnostics via LAN.
+
+🔍 Ethernet Capabilities:
+🔧 DHCP and static IP assignment.
+
+🔁 Ping testing to target IPs or internet hosts (e.g., 8.8.8.8).
+
+🖥️ Device discovery on the local subnet.
+
+🚦 LED indicators to confirm link status.
+
+📟 Serial monitor input for real-time configuration (local IP, subnet, gateway).
+
+💡 Ideal for environments where Wi-Fi is unreliable or disabled.
+
+📁 Project Structure
+arduino
+Copy
+/arduino/
+   └── ESP32_W5500_NetworkTester.ino   ← Arduino code for Ethernet module
+/flutter/
+   └── net_tester_app/                 ← Flutter app for controlling and viewing results
+🧰 Setup & Getting Started
+🔌 Wire up ESP32 with W5500 module (CS → GPIO 5 or 15 depending on your board).
+
+⚙️ Upload the Arduino sketch using Arduino IDE.
+
+📲 Install the Flutter app on your Android device.
+
+📡 Connect via Bluetooth and start testing.
+
+🧪 This Project Uses
+Ethernet Library
+
+flutter_bluetooth_serial
+
+ICMP Ping, SNMP Manager (Arduino libraries)
+
+🧰 Serial tools and manual config via Serial Monitor
+
+📎 Additional Resources for Flutter Beginners
+🧪 Lab: Write your first Flutter app
+
+🍳 Cookbook: Useful Flutter samples
+
+📘 Full Flutter Documentation
